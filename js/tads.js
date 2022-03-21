@@ -5,11 +5,6 @@ const tabFeatureImages = document.querySelectorAll('.feature__img');
 const tabTitle = document.querySelectorAll('.design__title');
 
 
-// console.log(tabTitle)
-
-
-
-
 function changeContent(array, value) {
 	array.forEach((elem) => {
 		if (elem.dataset.tabsField === value) {
@@ -17,8 +12,17 @@ function changeContent(array, value) {
 		} else {
 			elem.classList.add('hidden');
 		}
+
 	});
 }
+
+
+tabTitle.forEach((elem) => {
+	if (elem.classList.contains('design__title') && !elem.classList.contains('hidden')) {
+		document.title = elem.innerText;
+	}
+});
+
 
 
 tabButtons.forEach((tabButton) => {
@@ -30,7 +34,6 @@ tabButtons.forEach((tabButton) => {
 		changeContent(tabDescriptions, dataValue)
 		changeContent(tabFeatureImages, dataValue)
 		changeContent(tabTitle, dataValue)
-
 
 		tabTitle.forEach((title) => {
 			if (title.dataset.tabsField === dataValue) {

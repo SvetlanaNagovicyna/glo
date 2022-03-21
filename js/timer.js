@@ -5,10 +5,6 @@ let interval;
 
 const updateClock = () => {
 
-	// const date = new Date();
-	// const hours = date.getHours();
-	// const minutes = date.getMinutes();
-	// const seconds = date.getSeconds();
 
 	const date = new Date().getTime();
 	const dateDeadline = new Date(deadline).getTime();
